@@ -45,7 +45,7 @@ class TestPusher(unittest.TestCase):
     def testOneLayer(self):
         registryUrl = "http://localhost:5000"
         reg = Registry(registryUrl, "tests/busybox.tar")
-        reg.processImage()
+        reg.process_image()
         r = requests.get(registryUrl + "/v2/_catalog")
         self.assertTrue("razikus/busybox" in r.json()["repositories"])
         r = requests.get(registryUrl + "/v2/razikus/busybox/tags/list")
@@ -56,7 +56,7 @@ class TestPusher(unittest.TestCase):
     def testOneLayerAndRun(self):
         registryUrl = "http://localhost:5000"
         reg = Registry(registryUrl, "tests/busybox.tar")
-        reg.processImage()
+        reg.process_image()
         r = requests.get(registryUrl + "/v2/_catalog")
         self.assertTrue("razikus/busybox" in r.json()["repositories"])
         r = requests.get(registryUrl + "/v2/razikus/busybox/tags/list")
@@ -79,7 +79,7 @@ class TestPusher(unittest.TestCase):
 
         registryUrl = "http://localhost:5000"
         reg = Registry(registryUrl, "tests/whoami.tar")
-        reg.processImage()
+        reg.process_image()
         r = requests.get(registryUrl + "/v2/_catalog")
         self.assertTrue("razikus/whoami" in r.json()["repositories"])
         r = requests.get(registryUrl + "/v2/razikus/whoami/tags/list")

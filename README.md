@@ -7,7 +7,7 @@ Usage of library:
 from dockertarpusher import Registry
 
 reg = Registry("http://localhost:5000", "tests/busybox.tar", login = "admin", password = "admin123")
-reg.processImage()
+reg.process_image()
 
 ```
 

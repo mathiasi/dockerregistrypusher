@@ -19,4 +19,4 @@ verify = True
 if("--noSslVerify" in sys.argv):
     verify = False
 regClient = dockertarpusher.Registry(url, tarpath, stream = True, login = login, password = password, sslVerify = verify)
-regClient.processImage()
+regClient.process_image()

@@ -1,3 +1,6 @@
 dist/
 build/
 dockertarpusher.egg-info/
+venv
+settings.json
+.vscode
